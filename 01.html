@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        a{
+            text-decoration: none;
+        }
+        ul{
+            list-style-type: none;
+        }
+        .bg{
+            color:red;
+        }
+    </style>
+    <script src="lib/jquery/jquery-3.3.1.js"></script>
+</head>
+<body>
+<div class="box">
+<ul class="link">
+    <li><a>我是1号<a></li>
+    <li><a>我是1号<a></li>
+    <li><a>我是1号<a></li>
+</ul>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $('.link a').bind('click', function(){
+            $('.bg').show().removeClass('bg');
+            $(this).show().addClass('bg');
+        });
+        $('.link a').eq(0).addClass('bg');
+    })
+</script>
+</body>
+</html>
